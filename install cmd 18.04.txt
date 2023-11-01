@@ -1,0 +1,27 @@
+
+##### Multics Panel 4.2 For UBUNTU 18.04 Installation CMDS By Muhammad Ashan #####
+
+apt-get update
+
+apt-get upgrade -y
+
+apt-get install mysql-server unzip -y
+  
+mysql -v
+  
+  #I'm only comment, Please before put second command replace mysql password       ↓↓↓
+  
+  ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'REPLACE_SQL_PASSWORD';
+
+  FLUSH PRIVILEGES;
+
+  exit
+  
+sudo apt-get install php7.2-fpm php7.2-common php7.2-dev php7.2-curl php7.2-gd php7.2-json php7.2-mysql php7.2-odbc php7.2-pgsql php7.2-pspell php7.2-readline php7.2-sqlite3 php7.2-tidy php7.2-xml php7.2-xmlrpc php7.2-bcmath php7.2-bz2 php7.2-intl php7.2-mbstring php7.2-phpdbg php7.2-soap php7.2-zip php-imagick php-gettext php-redis php-memcached phpmyadmin -y
+
+sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+
+sudo service apache2 restart
+
+php /root/multics_v4.2_installer.php
+
